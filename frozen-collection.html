@@ -3,80 +3,72 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Frozen Collection | Gentleman Forager</title>
+<title>Frozen Wild Berry Collection</title>
 
 <style>
     body {
-        font-family: "Montserrat", sans-serif;
+        font-family: Arial, sans-serif;
         margin: 0;
-        padding: 0;
+        padding: 40px;
         background: #ffffff;
-        color: #1a1a1a;
-        line-height: 1.55;
+        color: #111;
     }
 
-    .section-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
-
-    h1.section-title {
-        font-size: 2.8rem;
-        font-weight: 800;
+    h1 {
         text-align: center;
-        margin: 80px 0 40px;
-        letter-spacing: 0.02em;
-    }
-
-    .item {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: center;
-        margin-bottom: 80px;
-    }
-
-    .item img {
-        width: 100%;
-        border-radius: 14px;
-        object-fit: cover;
-        box-shadow: 0 4px 18px rgba(0,0,0,0.15);
-    }
-
-    .item-text h2 {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
+        font-size: 42px;
+        margin-bottom: 60px;
         font-weight: 700;
     }
 
-    .desc {
-        font-size: 1.05rem;
-        margin-bottom: 20px;
-        color: #444;
+    .item {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 80px;
+        align-items: flex-start;
     }
 
-    .price {
-        font-size: 1.2rem;
+    .item img {
+        width: 500px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0px 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .item h2 {
+        font-size: 26px;
+        margin: 0 0 10px;
+        font-weight: 700;
+    }
+
+    .item p {
+        line-height: 1.6;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .buy-button {
+        display: inline-block;
+        background: #111;
+        color: #fff;
+        padding: 12px 26px;
+        border-radius: 6px;
+        font-size: 16px;
+        text-decoration: none;
+        margin-top: 16px;
         font-weight: 600;
-        margin-bottom: 8px;
     }
 
-    .shipping-note {
-        font-size: 0.95rem;
-        color: #3a3a3a;
-        font-style: italic;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
         .item {
-            grid-template-columns: 1fr;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
         .item img {
-            max-width: 90%;
-            margin: 0 auto;
+            width: 100%;
+            max-width: 500px;
         }
     }
 </style>
@@ -84,172 +76,167 @@
 
 <body>
 
-<div class="section-wrapper">
+<h1>Frozen Wild Berry Collection</h1>
 
-<!-- =============================================================== -->
-<!-- ===================  FROZEN WILD BERRIES  ===================== -->
-<!-- =============================================================== -->
-
-<h1 class="section-title">Frozen Wild Berry Collection</h1>
-
-<!-- Marionberries -->
+<!-- MARIONBERRIES -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/marionberries.jpg">
-    <div class="item-text">
+    <img src="assets/frozen-images/marionberries.jpg" alt="Marionberries" />
+    <div>
         <h2>Marionberries — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Deep blackberry-like richness with bright acidity and a wine-dark finish. Notes of black raspberry, subtle spice, and violet. Frozen at peak ripeness for intensity.</div>
+        <p>Deep blackberry-like richness with bright acidity and a wine-dark finish.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Sea Buckthorn -->
+<!-- SEA BUCKTHORN -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/seabuckthorn.jpg">
-    <div class="item-text">
+    <img src="assets/frozen-images/sea-buckthorn.jpg" alt="Sea Buckthorn Berries" />
+    <div>
         <h2>Sea Buckthorn Berries — Organic Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Explosively tart and tropical with flavors of passion fruit, mango, and sharp citrus zest. Extremely aromatic and vibrant in syrups, ferments, and cocktails.</div>
+        <p>Explosively tart and tropical with passion fruit, mango, and citrus zest notes.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Gooseberries -->
+<!-- GOOSEBERRIES -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/gooseberries.jpg">
-    <div class="item-text">
+    <img src="assets/frozen-images/gooseberries.jpg" alt="Gooseberries" />
+    <div>
         <h2>Gooseberries — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Tangy, refreshing acidity with notes of green grape, kiwi, and citrus. Excellent for preserves, desserts, beverages, and gastriques.</div>
+        <p>Bright, zesty bursts of sour grape, green apple, and floral undertones.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Black Currants -->
+<!-- BLACK CURRANTS -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/black-currants.jpg">
-    <div class="item-text">
-        <h2>Black Currants — Organic Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Bold, tannic, and wine-deep with cassis and dark berry intensity. Outstanding in cordials, pastries, syrups, and reductions.</div>
+    <img src="assets/frozen-images/black-currants.jpg" alt="Black Currants" />
+    <div>
+        <h2>Certified Organic Black Currants — Frozen (5 lb Bulk Pack)</h2>
+        <p>Intensely aromatic with deep black cherry, cassis, and forest wine notes.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Red Currants -->
+<!-- RED CURRANTS -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/red-currants.jpg">
-    <div class="item-text">
-        <h2>Red Currants — Organic Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Bright tartness with a clean, floral snap. Flavor sits between cranberry and pomegranate. Beautiful in glazes, pâtisserie, and cocktails.</div>
+    <img src="assets/frozen-images/red-currants.jpg" alt="Red Currants" />
+    <div>
+        <h2>Organic Red Currants — Frozen (5 lb Bulk Pack)</h2>
+        <p>Vivid tartness with bright cranberry, sour cherry, and citrus sparkle.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Elderberries -->
+<!-- ELDERBERRIES -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/elderberries.jpg">
-    <div class="item-text">
-        <h2>Wild Elderberries — Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Earthy, dark, and subtly tannic with a whisper of wild sweetness. Best used cooked — ideal for syrups, tonics, wines, and rich preserves.</div>
+    <img src="assets/frozen-images/elderberries.jpg" alt="Elderberries" />
+    <div>
+        <h2>Wild Foraged Elderberries — Frozen (5 lb Bulk Pack)</h2>
+        <p>Dark, earthy berry flavor with subtle floral complexity and tannic depth.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Lingonberries -->
+<!-- LINGONBERRIES -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/lingonberries.jpg">
-    <div class="item-text">
-        <h2>Lingonberries — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Tart and elegant with cranberry-like brightness and a clean woodland fruit character. Beautiful for savory pairings and Scandi-style preserves.</div>
+    <img src="assets/frozen-images/lingonberries.jpg" alt="Lingonberries" />
+    <div>
+        <h2>Wild Foraged Lingonberries — Frozen (5 lb Bulk Pack)</h2>
+        <p>Tart and bright with cranberry, apple skin, and subtle wild herb notes.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Coastal Huckleberries -->
+<!-- COASTAL HUCKLEBERRY -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/huckleberry-coastal.jpg">
-    <div class="item-text">
-        <h2>Coastal Huckleberries — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Dark, intense, and richly flavored with subtle evergreen notes. A Pacific Northwest favorite for pastries, sauces, and beverages.</div>
+    <img src="assets/frozen-images/huckleberry-coastal.jpg" alt="Coastal Huckleberries" />
+    <div>
+        <h2>Wild Foraged Coastal Huckleberries — Frozen (5 lb Bulk Pack)</h2>
+        <p>Bold blueberry-like sweetness with deep winey, resinous forest richness.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Mountain Huckleberries -->
+<!-- MOUNTAIN HUCKLEBERRY -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/huckleberry-mountain.jpg">
-    <div class="item-text">
-        <h2>Mountain Huckleberries — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">High-elevation berries with bright, clean fruitiness and balanced sweet-tart character. Exceptional in ice creams and reductions.</div>
+    <img src="assets/frozen-images/huckleberry-mountain.jpg" alt="Mountain Huckleberries" />
+    <div>
+        <h2>Wild Foraged Mountain Huckleberries — Frozen (5 lb Bulk Pack)</h2>
+        <p>Bright, tart, high-elevation berry flavor with crisp fruit acidity.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Wild Berry Trio -->
+<!-- SPRUCE TIPS -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/wild-berry-trio.jpg">
-    <div class="item-text">
-        <h2>Wild Berry Trio — Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">A curated blend of Coastal Huckleberries, Mountain Huckleberries, and Lingonberries. Balanced sweet-tart brightness with layered forest-fruit depth.</div>
-    </div>
-</div>
-
-<!-- Spruce Tips -->
-<div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/spruce-tips.jpg">
-    <div class="item-text">
+    <img src="assets/frozen-images/spruce-tips.jpg" alt="Spruce Tips" />
+    <div>
         <h2>Spruce Tips — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Citrus-pine brightness with resinous snap and hints of green apple. Exceptional for syrups, ferments, pickles, and Nordic-inspired cuisine.</div>
+        <p>Citrusy, pine-bright flavors with notes of resin, lemon, and forest herbs.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-
-<!-- =============================================================== -->
-<!-- ====================  PREMIUM TRUFFLES  ======================= -->
-<!-- =============================================================== -->
-
-<h1 class="section-title">Premium Wild Truffles</h1>
-
-<!-- Oregon Black Truffle -->
+<!-- OREGON BLACK TRUFFLE -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/Oregon%20Black%20Truffle.png">
-    <div class="item-text">
-        <h2>Oregon Black Truffle — Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Rich, earthy, and aromatic with deep chocolate, cedar, and sweet forest notes. Best used in infusions — butter, cream, broths, and sauces — where its aroma fully blooms.</div>
+    <img src="assets/frozen-images/oregon-black-truffle.jpg" alt="Oregon Black Truffle" />
+    <div>
+        <h2>Oregon Black Truffle — Frozen (1 lb Pack)</h2>
+        <p>Deep earthy aroma with cocoa, hazelnut, and sweet forest-floor perfume. Used grated or infused for maximum aroma.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Oregon White Truffle -->
+<!-- OREGON WHITE TRUFFLE -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/White%20Truffle.png">
-    <div class="item-text">
-        <h2>Oregon White Truffle — Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Bright, garlicky, and intensely aromatic with hints of shallot and hazelnut. Incredible in infused butter, cream sauces, polenta, and warm appetizers.</div>
+    <img src="assets/frozen-images/oregon-white-truffle.jpg" alt="Oregon White Truffle" />
+    <div>
+        <h2>Oregon White Truffle — Frozen (1 lb Pack)</h2>
+        <p>Pungent, garlicky, savory aroma with sharp cheese-like intensity. Best shaved over hot dishes or infused into fats.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-
-<!-- =============================================================== -->
-<!-- ====================  SPECIALTY FROZEN  ======================= -->
-<!-- =============================================================== -->
-
-<h1 class="section-title">Specialty Frozen Wild Foods</h1>
-
-<!-- Huitlacoche -->
+<!-- HUITLACOCHE -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/Huitlacoche.png">
-    <div class="item-text">
-        <h2>Huitlacoche — Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Earthy, savory, and lightly smoky with truffle-like depth. Silky when cooked and exceptional in quesadillas, soups, sauces, tamales, and modern fusion dishes.</div>
+    <img src="assets/frozen-images/huitlacoche.jpg" alt="Huitlacoche" />
+    <div>
+        <h2>Huitlacoche — Frozen (1 lb Pack)</h2>
+        <p>Smoky, earthy corn truffle with notes of mushroom, roasted corn, and black pepper.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Frozen Porcini -->
+<!-- PORCINI -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/Frozen%20Porcini.png">
-    <div class="item-text">
-        <h2>Frozen Porcini Mushrooms — (5 lb Bulk Pack)</h2>
-        <div class="desc">Soft, aromatic, and deeply savory with the classic porcini nuttiness. Best used like reconstituted dried porcini — in soups, stews, sauces, braises, and risotto.</div>
+    <img src="assets/frozen-images/porcini-frozen.jpg" alt="Frozen Porcini" />
+    <div>
+        <h2>Frozen Porcini Mushrooms — (1 lb Pack)</h2>
+        <p>Rich, nutty aroma with deep mushroom savoriness. Best for soups, sauces, stocks, and slow braises where texture is softened.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
-<!-- Sea Beans -->
+<!-- SEA BEANS -->
 <div class="item">
-    <img src="https://raw.githubusercontent.com/Gentleman-Forager/gf-frozen/main/assets/frozen-images/Sea%20Beans.png">
-    <div class="item-text">
-        <h2>Sea Beans — Wild Frozen (5 lb Bulk Pack)</h2>
-        <div class="desc">Crisp, briny, and naturally salty with clean ocean minerality. Excellent raw, pickled, sautéed, or used as a finishing accent for seafood dishes.</div>
+    <img src="assets/frozen-images/sea-beans.jpg" alt="Sea Beans" />
+    <div>
+        <h2>Sea Beans — Wild Frozen (1 lb Pack)</h2>
+        <p>Briny, crisp, oceanic flavors with natural salinity and a bright, refreshing snap.</p>
+        <a class="buy-button">Buy Now</a>
     </div>
 </div>
 
+<!-- WILD BERRY TRIO -->
+<div class="item">
+    <img src="assets/frozen-images/wild-berry-trio.jpg" alt="Wild Berry Trio" />
+    <div>
+        <h2>Wild Berry Trio — Frozen (5 lb Pack)</h2>
+        <p>A vibrant mix of Coastal Huckleberry, Mountain Huckleberry, and Lingonberry — balanced sweet-tart forest fruit complexity.</p>
+        <a class="buy-button">Buy Now</a>
+    </div>
 </div>
+
 </body>
 </html>
