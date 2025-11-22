@@ -1,10 +1,11 @@
-<!-- Gentleman Forager Frozen Wild Foods Collection - Redesigned HTML Page -->
+<!-- Gentleman Forager Frozen Wild Foods Collection - Final Corrected Version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frozen Wild Foods Collection</title>
+
   <style>
     body {
       font-family: Montserrat, sans-serif;
@@ -14,86 +15,7 @@
       color: #1a1a1a;
     }
 
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      margin: 60px 0 20px 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-bottom: 2px solid #2d4c34;
-      padding-bottom: 6px;
-      width: fit-content;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
-    }
-
-    .product-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.25s ease;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .product-info {
-      padding: 16px 18px;
-    }
-
-    .product-name {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      line-height: 1.3;
-    }
-
-    .product-price {
-      font-size: 16px;
-      font-weight: 500;
-      color: #2d4c34;
-      margin-top: 8px;
-    }
-
-    .cta-button {
-      margin-top: 14px;
-      display: inline-block;
-      background-color: #2d4c34;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-
-    .cta-button:hover {
-      background-color: #1f3523;
-    }
-  </style>
-  <style>
-    /* HERO BANNER */
+    /* Hero */
     .hero {
       width: 100%;
       margin: 0 auto 60px auto;
@@ -111,7 +33,7 @@
       text-shadow: 0 3px 8px rgba(0,0,0,0.4);
     }
 
-    /* CATEGORY NAV */
+    /* Navigation */
     .category-nav {
       display: flex;
       justify-content: center;
@@ -133,8 +55,32 @@
       transform: translateY(-3px);
     }
 
-    /* PRODUCT GRID UPGRADE */
+    /* Section titles */
+    .section-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 60px 0 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 2px solid #2d4c34;
+      padding-bottom: 6px;
+      width: fit-content;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    /* Product cards */
     .product-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.25s ease, box-shadow 0.25s ease;
       cursor: pointer;
     }
@@ -143,18 +89,46 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.18);
     }
 
-    /* IMAGE ZOOM HOVER */
     .product-image img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
       transition: transform 0.35s ease;
     }
     .product-card:hover .product-image img {
       transform: scale(1.05);
     }
 
-    /* MOBILE IMPROVEMENTS */
+    .product-info {
+      padding: 16px 18px;
+    }
+    .product-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .cta-button {
+      margin-top: 14px;
+      display: inline-block;
+      background-color: #2d4c34;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background-color: #1f3523;
+    }
+
+    /* Mobile */
     @media (max-width: 700px) {
       .hero h1 { font-size: 38px; }
-      .section-label { font-size: 26px; }
+      .section-title { font-size: 20px; }
       .product-name { font-size: 16px; }
       .cta-button { font-size: 14px; }
     }
@@ -162,21 +136,22 @@
 </head>
 
 <body>
+
+  <!-- HERO -->
   <div class="hero">
     <h1>Frozen Wild Foods Collection</h1>
   </div>
 
+  <!-- NAV -->
   <div class="category-nav">
     <a href="#berries" class="category-button">Frozen Berries</a>
     <a href="#greens" class="category-button">Frozen Greens</a>
     <a href="#fungi" class="category-button">Truffles & Mushrooms</a>
   </div>
-  <h1>Frozen Wild Foods Collection</h1>
 
-  <!-- BERRIES SECTION -->
+  <!-- BERRIES -->
   <div class="section">
-    <div class="section-title"><a id="berries"></a>
-Frozen Wild Berries</div>
+    <div class="section-title"><a id="berries"></a>Frozen Wild Berries</div>
     <div class="grid">
 
       <div class="product-card">
@@ -282,10 +257,9 @@ Frozen Wild Berries</div>
     </div>
   </div>
 
-  <!-- GREENS SECTION -->
+  <!-- GREENS -->
   <div class="section">
-    <div class="section-title"><a id="greens"></a>
-Frozen Wild Greens</div>
+    <div class="section-title"><a id="greens"></a>Frozen Wild Greens</div>
     <div class="grid">
 
       <div class="product-card">
@@ -311,10 +285,9 @@ Frozen Wild Greens</div>
     </div>
   </div>
 
-  <!-- FUNGI SECTION -->
+  <!-- FUNGI -->
   <div class="section">
-    <div class="section-title"><a id="fungi"></a>
-Frozen Wild Truffles & Mushrooms</div>
+    <div class="section-title"><a id="fungi"></a>Frozen Wild Truffles & Mushrooms</div>
     <div class="grid">
 
       <div class="product-card">
@@ -335,5 +308,32 @@ Frozen Wild Truffles & Mushrooms</div>
           <div class="product-name">Oregon White Truffle — Frozen (1 lb Pack)</div>
           <a class="cta-button" href="https://www.gentlemanforager.com/product-page/oregon-white-truffle-wild-foraged-frozen" target="_blank">Buy Now</a>
         </div>
-      </
+      </div>
+
+      <!-- Huitlacoche -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/frozen-images/huitlacoche.jpg" alt="Huitlacoche Corn Smut" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Huitlacoche — Frozen (1 lb Pack)</div>
+          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/huitlacoche-frozen-5-lb-pack" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Porcini -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/frozen-images/porcini-frozen.jpg" alt="Frozen Porcini Mushrooms" />
+        </div>
+        <div class="product-info">
+          <div class="product-name">Frozen Porcini Mushrooms — (1 lb Pack)</div>
+          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/porcini-mushrooms-wild-foraged-frozen-5-lb-bulk" target="_blank">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
 </html>
