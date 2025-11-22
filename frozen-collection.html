@@ -1,339 +1,210 @@
-<!-- Gentleman Forager Frozen Wild Foods Collection - Final Corrected Version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frozen Wild Foods Collection</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Frozen Wild Foods Collection</title>
 
-  <style>
+<style>
     body {
-      font-family: Montserrat, sans-serif;
-      background-color: #f7f3eb;
-      margin: 0;
-      padding: 40px;
-      color: #1a1a1a;
+        font-family: Montserrat, Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        background: #f7f3eb;
+        color: #111;
     }
 
-    /* Hero */
+    /* HERO SECTION */
     .hero {
-      width: 100%;
-      margin: 0 auto 60px auto;
-      padding: 80px 20px;
-      background: url('assets/frozen-images/hero-frozen.jpg') center/cover no-repeat;
-      border-radius: 16px;
-      text-align: center;
-      color: #fff;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        width: 100%;
+        height: 420px;
+        background: url("assets/frozen-images/sea-buckthorn.jpg") center center / cover no-repeat;
+        border-radius: 16px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+        overflow: hidden;
+        position: relative;
+    }
+    .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.35);
     }
     .hero h1 {
-      font-size: 54px;
-      font-weight: 800;
-      margin: 0;
-      text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+        position: relative;
+        z-index: 2;
+        font-size: 56px;
+        color: #fff;
+        font-weight: 800;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+        margin: 0;
     }
 
-    /* Navigation */
+    /* CATEGORY NAV */
     .category-nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 40px 0;
-      flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 40px 0 60px 0;
+        flex-wrap: wrap;
     }
     .category-button {
-      padding: 12px 24px;
-      background: #2d4c34;
-      color: #fff;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+        padding: 12px 24px;
+        background: #2d4c34;
+        color: #fff;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s, transform 0.2s;
     }
     .category-button:hover {
-      background: #1f3523;
-      transform: translateY(-3px);
+        background: #1f3523;
+        transform: translateY(-3px);
     }
 
-    /* Section titles */
+    /* SECTION HEADERS */
     .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      margin: 60px 0 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-bottom: 2px solid #2d4c34;
-      padding-bottom: 6px;
-      width: fit-content;
+        font-size: 26px;
+        font-weight: 700;
+        margin: 40px 0 20px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 3px solid #2d4c34;
+        width: fit-content;
+        padding-bottom: 6px;
     }
 
-    /* Grid */
+    /* GRID LAYOUT */
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 30px;
-      margin-bottom: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        gap: 28px;
+        margin-bottom: 50px;
     }
 
-    /* Product cards */
+    /* PRODUCT CARDS */
     .product-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      cursor: pointer;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+        transform: translateY(-6px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.18);
     }
-
     .product-image img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.35s ease;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.35s ease;
     }
     .product-card:hover .product-image img {
-      transform: scale(1.05);
+        transform: scale(1.06);
     }
-
     .product-info {
-      padding: 16px 18px;
+        padding: 16px 18px;
     }
     .product-name {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 4px;
-      line-height: 1.3;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.3;
     }
 
     .cta-button {
-      margin-top: 14px;
-      display: inline-block;
-      background-color: #2d4c34;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s;
+        display: inline-block;
+        margin-top: 6px;
+        background: #2d4c34;
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 6px;
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.2s;
     }
     .cta-button:hover {
-      background-color: #1f3523;
+        background: #1f3523;
     }
-
-    /* Mobile */
-    @media (max-width: 700px) {
-      .hero h1 { font-size: 38px; }
-      .section-title { font-size: 20px; }
-      .product-name { font-size: 16px; }
-      .cta-button { font-size: 14px; }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
+<!-- HERO -->
+<div class="hero">
     <h1>Frozen Wild Foods Collection</h1>
-  </div>
+</div>
 
-  <!-- NAV -->
-  <div class="category-nav">
+<!-- CATEGORY NAV -->
+<div class="category-nav">
     <a href="#berries" class="category-button">Frozen Berries</a>
     <a href="#greens" class="category-button">Frozen Greens</a>
     <a href="#fungi" class="category-button">Truffles & Mushrooms</a>
-  </div>
+</div>
 
-  <!-- BERRIES -->
-  <div class="section">
-    <div class="section-title"><a id="berries"></a>Frozen Wild Berries</div>
-    <div class="grid">
+<!-- ===================================================== -->
+<!-- BERRIES SECTION -->
+<!-- ===================================================== -->
+<div class="section-title" id="berries">Frozen Wild Berries</div>
+<div class="grid">
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/marionberries.jpg" alt="Marionberries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Marionberries — Wild Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/marionberries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <!-- 10 BERRY ITEMS -->
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/marionberries.jpg"></div><div class="product-info"><div class="product-name">Marionberries — Wild Frozen (5 lb Pack)</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/marionberries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/sea-buckthorn.jpg" alt="Sea Buckthorn Berries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Sea Buckthorn Berries — Organic Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/sea-buckthorn-berries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/sea-buckthorn.jpg"></div><div class="product-info"><div class="product-name">Sea Buckthorn Berries — Organic Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/sea-buckthorn-berries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/gooseberries.jpg" alt="Gooseberries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Gooseberries — Wild Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/gooseberries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/gooseberries.jpg"></div><div class="product-info"><div class="product-name">Gooseberries — Wild Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/gooseberries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/black-currants.jpg" alt="Black Currants" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Certified Organic Black Currants — Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/certified-organic-black-currants" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/black-currants.jpg"></div><div class="product-info"><div class="product-name">Certified Organic Black Currants — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/certified-organic-black-currants" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/red-currants.jpg" alt="Red Currants" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Organic Red Currants — Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/organic-red-currants" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/red-currants.jpg"></div><div class="product-info"><div class="product-name">Organic Red Currants — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/organic-red-currants" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/elderberries.jpg" alt="Elderberries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Wild Foraged Elderberries — Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-elderberries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/elderberries.jpg"></div><div class="product-info"><div class="product-name">Wild Foraged Elderberries — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-elderberries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/lingonberries.jpg" alt="Lingonberries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Wild Foraged Lingonberries — Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-lingonberries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/lingonberries.jpg"></div><div class="product-info"><div class="product-name">Wild Foraged Lingonberries — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-lingonberries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/huckleberry-coastal.jpg" alt="Coastal Huckleberries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Wild Foraged Coastal Huckleberries — Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-coastal-huckleberries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/huckleberry-coastal.jpg"></div><div class="product-info"><div class="product-name">Coastal Huckleberries — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-coastal-huckleberries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/huckleberry-mountain.jpg" alt="Mountain Huckleberries" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Wild Foraged Mountain Huckleberries — Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-mountain-huckleberries" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/huckleberry-mountain.jpg"></div><div class="product-info"><div class="product-name">Mountain Huckleberries — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-foraged-mountain-huckleberries" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/wild-berry-trio.jpg" alt="Wild Berry Trio" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Wild Berry Trio — Frozen (5 lb Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-frozen-berry-trio-5-lb-bulk-pack" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/wild-berry-trio.jpg"></div><div class="product-info"><div class="product-name">Wild Berry Trio — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/wild-frozen-berry-trio-5-lb-bulk-pack" target="_blank">Buy Now</a></div></div>
 
-    </div>
-  </div>
+</div>
 
-  <!-- GREENS -->
-  <div class="section">
-    <div class="section-title"><a id="greens"></a>Frozen Wild Greens</div>
-    <div class="grid">
+<!-- ===================================================== -->
+<!-- GREENS SECTION -->
+<!-- ===================================================== -->
+<div class="section-title" id="greens">Frozen Wild Greens</div>
+<div class="grid">
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/spruce-tips.jpg" alt="Spruce Tips" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Spruce Tips — Wild Frozen (5 lb Bulk Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/spruce-tips" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/spruce-tips.jpg"></div><div class="product-info"><div class="product-name">Spruce Tips — Wild Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/spruce-tips" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/sea-beans.jpg" alt="Sea Beans" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Sea Beans — Wild Frozen (1 lb Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/sea-beans-wild-foraged-frozen-5-lb-bulk" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/sea-beans.jpg"></div><div class="product-info"><div class="product-name">Sea Beans — Wild Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/sea-beans-wild-foraged-frozen-5-lb-bulk" target="_blank">Buy Now</a></div></div>
 
-    </div>
-  </div>
+</div>
 
-  <!-- FUNGI -->
-  <div class="section">
-    <div class="section-title"><a id="fungi"></a>Frozen Wild Truffles & Mushrooms</div>
-    <div class="grid">
+<!-- ===================================================== -->
+<!-- FUNGI SECTION -->
+<!-- ===================================================== -->
+<div class="section-title" id="fungi">Frozen Wild Truffles & Mushrooms</div>
+<div class="grid">
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/oregon-black-truffle.jpg" alt="Oregon Black Truffle" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Oregon Black Truffle — Frozen (1 lb Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/oregon-black-truffle" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/oregon-black-truffle.jpg"></div><div class="product-info"><div class="product-name">Oregon Black Truffle — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/oregon-black-truffle" target="_blank">Buy Now</a></div></div>
 
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/oregon-white-truffle.jpg" alt="Oregon White Truffle" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Oregon White Truffle — Frozen (1 lb Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/oregon-white-truffle-wild-foraged-frozen" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/oregon-white-truffle.jpg"></div><div class="product-info"><div class="product-name">Oregon White Truffle — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/oregon-white-truffle-wild-foraged-frozen" target="_blank">Buy Now</a></div></div>
 
-      <!-- Huitlacoche -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/huitlacoche.jpg" alt="Huitlacoche Corn Smut" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Huitlacoche — Frozen (1 lb Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/huitlacoche-frozen-5-lb-pack" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/huitlacoche.jpg"></div><div class="product-info"><div class="product-name">Huitlacoche — Frozen</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/huitlacoche-frozen-5-lb-pack" target="_blank">Buy Now</a></div></div>
 
-      <!-- Porcini -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="assets/frozen-images/porcini-frozen.jpg" alt="Frozen Porcini Mushrooms" />
-        </div>
-        <div class="product-info">
-          <div class="product-name">Frozen Porcini Mushrooms — (1 lb Pack)</div>
-          <a class="cta-button" href="https://www.gentlemanforager.com/product-page/porcini-mushrooms-wild-foraged-frozen-5-lb-bulk" target="_blank">Buy Now</a>
-        </div>
-      </div>
+    <div class="product-card"><div class="product-image"><img src="assets/frozen-images/porcini-frozen.jpg"></div><div class="product-info"><div class="product-name">Frozen Porcini Mushrooms — 1 lb Pack</div><a class="cta-button" href="https://www.gentlemanforager.com/product-page/porcini-mushrooms-wild-foraged-frozen-5-lb-bulk" target="_blank">Buy Now</a></div></div>
 
-    </div>
-  </div>
+</div>
 
 </body>
 </html>
